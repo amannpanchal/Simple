@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { ConfigProvider } from "antd";
+import React from "react";
+import Navbar from "./Components/Navbar/Navbar";
+import Home from "./Components/Home/Home";
+import MyFooter from "./Components/Footer/MyFooter";
 
-function App() {
+
+const App = () => {
+
+  const scrollToSection = (id) => {
+
+     const element = document.getElementById(id);
+     if (element) {
+       element.scrollIntoView({ behavior: "smooth", block: "start" });
+     }
+   };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ConfigProvider>
+        <Navbar scrollToSection={scrollToSection} />
+        <Home scrollToSection={scrollToSection} />
+        <MyFooter />
+      </ConfigProvider>
     </div>
   );
-}
+};
 
 export default App;

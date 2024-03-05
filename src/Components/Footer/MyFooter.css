@@ -1,0 +1,41 @@
+.footer{
+    height : 400px;
+    /* position : absolute; */
+    bottom : 0;
+    width : 100%;
+    background-color: black;
+}
+.menuList {
+    height: 100%;
+    margin-bottom : 20px;
+ 
+  
+}
+.menuItem{
+    color : white;
+    margin : 15px 0;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+
+}
+.logoFooter{
+    width  :200px;
+    height : auto;
+    margin : 40px 0;
+
+
+}
+.footerBottom{
+/* display: grid;
+grid-template-columns: 1fr 1fr 1fr; */
+display : flex;
+justify-content: space-evenly;
+    margin : 0;
+    height : 200px;
+
+}
+.icons {
+    font-size: 27px;
+    margin-right : 10px;
+}
