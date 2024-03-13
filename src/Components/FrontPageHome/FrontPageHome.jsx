@@ -35,10 +35,11 @@ const FrontPageHome = () => {
                         <div className='mainBoldText'>
 
 
-                            Seemless <br />
-                            Rides <span>Anytime</span>
+                            <span>Cab Services</span>
                             <br />
-                            Anywhere
+                            Ride Smoothly <br/>Anywhere
+                            <br />
+
                             <div className='buttons'>
                                 <button className='callButton center'
                                     onClick={handleCallClick}

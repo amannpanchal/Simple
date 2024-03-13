@@ -11,7 +11,7 @@
     box-shadow: 0.1px 0.1px 3px 0.1px gray;
     top: 0;
     background-color: var(--global-background-color);
-z-index: 2222;
+z-index: 1000;
 
 
 }

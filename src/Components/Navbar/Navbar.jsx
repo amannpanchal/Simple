@@ -38,6 +38,8 @@ const Navbar = ({ scrollToSection}) => {
 const AppMenu = ({ scrollToSection }) => {
     const navigate = useNavigate();
     const [open, setOpen] = useState(false);
+    // State to track the currently selected menu item, defaulting to "home"
+    const [current, setCurrent] = useState('home');
 
     const items = [
         {
@@ -66,27 +68,35 @@ const AppMenu = ({ scrollToSection }) => {
         setOpen(false);
     };
 
- 
+    // Handler to update the current menu item and close the drawer if open
+    const handleClick = (itemKey) => {
+        scrollToSection(itemKey);
+        setCurrent(itemKey);
+        if (open) {
+            setOpen(false);
+        }
+    };
+
     return (
         <>
             <AlignRightOutlined className='sideMenu' onClick={showDrawer} />
 
-            <Drawer onClose={onClose} open={open}>
-                <Menu  mode="vertical">
+            <Drawer style = {{zIndex : 2323234234}} onClose={onClose} open={open}>
+                <Menu mode="vertical" selectedKeys={[current]}>
                     {items.map(item => (
                         <Menu.Item
-                            onClick={() => { scrollToSection(item.key)}}
+                            onClick={() => handleClick(item.key)}
                             key={item.key}>{item.label}</Menu.Item>
                     ))}
                 </Menu>
             </Drawer>
 
             <div className='parentMenu'>
-                <Menu className='menu' >
+                <Menu className='menu' selectedKeys={[current]}>
                     {items.map(item => (
                         <Menu.Item
-                            onClick={() => { scrollToSection(item.key) }}
-                            key={item.key} >
+                            onClick={() => handleClick(item.key)}
+                            key={item.key}>
                             {item.label}
                         </Menu.Item>
                     ))}

@@ -19,7 +19,7 @@ const App = () => {
       <ConfigProvider>
         <Navbar scrollToSection={scrollToSection} />
         <Home scrollToSection={scrollToSection} />
-        <MyFooter />
+        <MyFooter scrollToSection={scrollToSection} />
       </ConfigProvider>
     </div>
   );

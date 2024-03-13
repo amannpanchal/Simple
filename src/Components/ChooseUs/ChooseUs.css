@@ -2,3 +2,19 @@
     flex-direction: column;
   
 }
+.chooseus-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    /* Ensure all cards have the same height */
+}
+
+.chooseus-image {
+    width: 100%;
+    /* Make image width responsive to card width */
+    height: 200px;
+    /* Fixed height for images */
+    object-fit: cover;
+    /* Ensure images cover the area without distorting aspect ratio */
+}
