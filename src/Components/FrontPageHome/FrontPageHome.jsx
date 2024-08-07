@@ -11,12 +11,12 @@ const FrontPageHome = () => {
 
 
     const handleCallClick = () => {
-        window.location.href = 'tel:+918397962296';
+        window.location.href = 'tel:+917056118281';
     };
 
     const handleWhatsAppClick = () => {
 
-        window.location.href = 'https://wa.me/8397962296';
+        window.location.href = 'https://wa.me/7056118281';
     };
 
 
