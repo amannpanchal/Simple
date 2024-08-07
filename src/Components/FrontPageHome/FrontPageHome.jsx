@@ -16,7 +16,7 @@ const FrontPageHome = () => {
 
     const handleWhatsAppClick = () => {
 
-        window.location.href = 'https://wa.me/7056118281';
+        window.location.href = 'https://wa.me/+917056118281';
     };
 
 
